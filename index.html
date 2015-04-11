@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="cancelRequestApp">
+<head>
+	<title>Cancel Promise</title>
+	<script type="text/javascript" src="../node_modules/angular/angular.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body ng-controller="mainController">
+	<p><a href ng-click="getFriends(name)">Click to get John's friends</a> - <a href ng-click="cancelRequests()">Cancel</a></p>
+	<p ng-show="loading">Loading...</p>
+	<p ng-show="error">{{ error }}</p>
+	<ul ng-show="!loading && data">
+		<li ng-repeat="friend in data.friends">{{ friend }}</li>
+	</ul>
+</body>
+</html>
